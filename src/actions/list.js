@@ -6,7 +6,10 @@
 * - you must use the functions from "../store"
 *
 */
+import * as store from "../store"
 
-const list = () => {};
+const list = () => {
+    return store.getState()
+};
 
 export default list;

@@ -7,7 +7,13 @@
 * - the updated element must not share the same reference as the previous one.
 *
 */
+import * as store from "../store"
 
-const update = () => {};
+const update = (index) => {
+    let url = window.prompt();
+    let list = store.getState();
+    list.splice(index, 1, url);
+    store.setState(list);
+};
 
 export default update;

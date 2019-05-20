@@ -6,7 +6,10 @@
 * - you must use the functions from "../store"
 *
 */
+import * as store from "../store"
 
-const get = () => {};
+const get = (index) => {
+    return store.getState()[index]
+};
 
 export default get;

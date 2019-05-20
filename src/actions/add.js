@@ -8,7 +8,16 @@
 * - you must use the functions from "../store"
 *
 */
+import * as store from "../store"
 
-const add = () => {};
+const add = (elm) => {
+    let list = store.getState();
+    if (Array.isArray(elm)) {
+        Array.prototype.push.apply(list, elm);
+    }
+    else
+        list.push(elm);
+    store.setState(list)
+};
 
 export default add;
